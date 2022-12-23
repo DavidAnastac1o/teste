@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1669816196 source:c:\users\david\desktop\files\code\c\projects\davidanastacio202200843_tomas\transportadoraaereaips_david_tomas\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"functions.h"
+
+1669817334 source:c:\users\david\desktop\files\code\c\projects\davidanastacio202200843_tomas\transportadoraaereaips_david_tomas\menu.c
+	<stdio.h>
+	<conio.h>
+	"functions.h"
+
+1667492437 source:c:\users\david\desktop\files\code\c\projects\davidanastacio202200843_tomas\transportadoraaereaips_david_tomas\src\functions.cpp
+	"functions.h"
+
+1667505127 c:\users\david\desktop\files\code\c\projects\davidanastacio202200843_tomas\transportadoraaereaips_david_tomas\include\functions.h
+
+1669825543 source:c:\users\david\desktop\files\code\c\projects\davidanastacio202200843_tomas\transportadoraaereaips_david_tomas\adicionaraeronave.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+
+1669814852 source:c:\users\david\desktop\files\code\c\projects\davidanastacio202200843_tomas\transportadoraaereaips_david_tomas\adicionarpassageiro.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"functions.h"
+
+1669826879 source:c:\users\david\desktop\files\code\c\projects\davidanastacio202200843_tomas\transportadoraaereaips_david_tomas\listaraeronaves.c
+	<stdio.h>
+	<stdlib.h>
+	"functions.h"
+
+1669825234 source:c:\users\david\desktop\files\code\c\projects\davidanastacio202200843_tomas\transportadoraaereaips_david_tomas\listarpassageiros.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"functions.h"
+
