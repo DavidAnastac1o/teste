@@ -31,8 +31,33 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Passageiros.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="adicionarAeronave.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="adicionarAeronave.h" />
+		<Unit filename="adicionarPassageiro.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="general.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="listarAeronaves.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="listarPassageiros.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="menu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="menu.h">
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="options.h">
 			<Option target="&lt;{~None~}&gt;" />
