@@ -1,9 +1,12 @@
 # depslib dependency file v1.0
-1669825542 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\adicionaraeronave.c
+1671898801 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\adicionaraeronave.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
 	<string.h>
+	"Aeronave.h"
+	"Passageiros.h"
+	"general.h"
 
 1671835468 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\main.c
 	<stdio.h>
@@ -20,18 +23,22 @@
 
 1671837502 c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\menu.h
 
-1671850197 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\adicionarpassageiro.c
+1671896894 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\adicionarpassageiro.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Passageiros.h"
 	"general.h"
 
-1671834912 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\listaraeronaves.c
+1671898765 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\listaraeronaves.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
+	"Aeronave.h"
+	"Passageiros.h"
+	"general.h"
 
-1671847354 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\listarpassageiros.c
+1671897306 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\listarpassageiros.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -40,5 +47,7 @@
 
 1671849553 c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\passageiros.h
 
-1671850100 c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\general.h
+1671896800 c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\general.h
+
+1671896540 c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\aeronave.h
 

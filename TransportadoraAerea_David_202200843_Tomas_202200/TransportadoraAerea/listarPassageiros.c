@@ -4,8 +4,7 @@
 #include "Passageiros.h"
 #include "general.h"
 
-int listingPassengers()
-{
+int listingPassengers(){
 	FILE *File;
 	typePassenger Passengers;
 
@@ -18,6 +17,7 @@ int listingPassengers()
 
 	printPassangers(Passengers, File);
 	closeFile(File);
+	goBack();
 }
 
 void printPassangers(typePassenger passengers, FILE *file){
@@ -31,6 +31,9 @@ void printPassangers(typePassenger passengers, FILE *file){
 void closeFile(FILE *file){
 	//close the file
     fclose (file);
-	printf("\n\n\tPress enter to go back!");
+}
+
+void goBack(){
+    printf("\n\n\tPress enter to go back!");
 	getchar();
 }

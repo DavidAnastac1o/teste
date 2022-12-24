@@ -6,17 +6,19 @@
 
 int addPassenger(){
     int RepeatTimes = askInt("Type the number of passenger's you pretend to insert: ");
+    typePassenger Passengers[RepeatTimes];
     FILE *File;
+
     //open file for writing
 	File = fopen ("data/passenger.txt", "r+");
 	if (File == NULL){
 		fprintf(stderr, "\nError opened file\n");
 		exit (1);
 	}
-    typePassenger Passengers[RepeatTimes];
 
     writeinFile(Passengers, File, RepeatTimes);
 	closeFile(File);
+    goBack();
 }
 
 void writeinFile(typePassenger *passengers, FILE *file, int repeatTimes){

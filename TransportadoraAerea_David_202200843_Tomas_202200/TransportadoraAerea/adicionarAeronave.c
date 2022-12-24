@@ -2,33 +2,9 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <string.h>
-
-//structure to read and write
-typedef struct aeronave{
-	int id;
-	int capacity;
-    int totalFlights;
-
-	char currentState[20];
-	char location[20];
-	char destiny[20];
-
-	//passengers
-    int** passengerId;
-
-    //last fights using 3 variables because its easier to manipulate
-	char lastFlight1[20];
-	char lastFlight2[20];
-	char lastFlight3[20];
-};
-
-struct Passenger
-{
-	int id;
-	int nif;
-	char firstName[20];
-	char lastName[20];
-};
+#include "Aeronave.h"
+#include "Passageiros.h"
+#include "general.h"
 
 int addPlane(){
     //setup
@@ -38,12 +14,12 @@ int addPlane(){
     int repeatTimes = 0, i = 0, k = 0, counter = 0, numberChoice, aux;
     printf("Type the number of airplanes you pretend to insert: ");
     scanf("%d", &repeatTimes);
-    struct aeronave airplane[repeatTimes];
-    struct Passenger passengers;
+    typeAirplane airplane[repeatTimes];
+    typePassenger passengers;
 	char *formater = "";
 
 	//open file for writing
-	file = fopen ("data/aeronaves.txt", "w");
+	file = fopen ("data/aeronaves.txt", "r+");
 	if (file == NULL){
 		fprintf(stderr, "\nError opened file\n");
 		exit (1);
@@ -57,7 +33,7 @@ int addPlane(){
 	}
 
 	//gets the last id value
-    while(fread(&airplane, sizeof(struct aeronave), 1, file)){
+    while(fread(&airplane, sizeof(typeAirplane), 1, file)){
         counter++;
     }
 
@@ -66,6 +42,7 @@ int addPlane(){
         counter++;
         airplane[i].id = counter;
         airplane[i].totalFlights = 0;
+        airplane[i].capacity = 0;
         airplane[i].passengerId = malloc(2 * sizeof(*airplane[i].passengerId));
         memcpy(airplane[i].lastFlight1, "None", 10);
         memcpy(airplane[i].lastFlight2, "None", 10);
@@ -134,9 +111,8 @@ int addPlane(){
         //printing table
         printf("\n|ID%-8s|NAME%-34s|", formater, formater);
         //read file contents
-        while(fread(&passengers, sizeof(struct Passenger), 1, file2))
+        while(fread(&passengers, sizeof(typeAirplane), 1, file2))
             printf ("\n|%-10d|%-12s %-25s|", passengers.id, passengers.firstName, passengers.lastName);
-
 
         //changing the size of the array tmp is a temporary variable
         int **tmp = realloc(airplane[i].passengerId, airplane[i].capacity * sizeof(*airplane[i].passengerId));
@@ -149,7 +125,7 @@ int addPlane(){
         }
 
         //write structure to the file
-        fwrite (&airplane[i], sizeof(struct aeronave), 1, file);
+        fwrite (&airplane[i], sizeof(typeAirplane), 1, file);
     }
 
 	if(fwrite != 0)
@@ -157,9 +133,7 @@ int addPlane(){
 	else
 		printf("\nError writing file contents!\n");
 
-	// close file
-	fclose (file);
-    printf("\n\nPress enter to go back!");
-	getchar();
-	return 0;
+	closeFile(file);
+	closeFile(file2);
+	goBack();
 }
