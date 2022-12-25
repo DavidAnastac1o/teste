@@ -16,12 +16,13 @@ int addPassenger(){
 		exit (1);
 	}
 
-    writeinFile(Passengers, File, RepeatTimes);
+    writeinFilePassengers(Passengers, File, RepeatTimes);
 	closeFile(File);
     goBack();
+    return 1;
 }
 
-void writeinFile(typePassenger *passengers, FILE *file, int repeatTimes){
+void writeinFilePassengers(typePassenger *passengers, FILE *file, int repeatTimes){
     int i = 0, counter = 0;
 	//gets the last id value
     while(fread(&*passengers, sizeof(typePassenger), 1, file))

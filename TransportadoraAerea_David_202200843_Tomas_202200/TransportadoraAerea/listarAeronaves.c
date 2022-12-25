@@ -2,22 +2,27 @@
 #include <stdlib.h>
 #include <string.h>
 #include "Aeronave.h"
-#include "Passageiros.h"
 #include "general.h"
 
 int listingPlanes()
 {
-	FILE *file;
-	typeAirplane airplane;
-	char *formater = "";
-	int i, temporary[1][4];
+	FILE *File;
+	typeAirplane Airplane;
 
 	//open aeronaves.txt
-	file = fopen ("data/aeronaves.txt", "r");
-	if (file == NULL){
+	File = fopen ("data/aeronaves.txt", "r");
+	if (File == NULL){
 		fprintf(stderr, "\n\nERROR: Unable to open the file\n");
 		exit (1);
 	}
+    printAirplane(Airplane, File);
+    closeFile(File);
+    goBack();
+}
+
+void printAirplane(typeAirplane airplane, FILE *file){
+    char *formater = "";
+	int i, temporary[1][4];
     printf("\n\t|ID%-8s|CAPACITY%-2s|TOTAL FLIGHTS%-1s|STATUS%-8s|Location%-8s|Destination%-8s|Passengers Id's%-5s|", formater, formater, formater, formater, formater, formater, formater);
 	//read file contents
 	while(fread(&airplane, sizeof(typeAirplane), 1, file)){
@@ -29,10 +34,9 @@ int listingPlanes()
         printf ("\n\t|%-10d|%-10d|%-14d|%-14s|%-16s|%-19s|", airplane.id, airplane.capacity, airplane.totalFlights, airplane.currentState, airplane.location, airplane.destiny);
 
         for (i = 0; i < airplane.capacity; i++) {
-            printf(" %d,", temporary[0][i]);
+            printf(" %d", temporary[0][i]);
+            if (i != airplane.capacity-1)
+                printf(",");
         }
-        printf("s%-13s|", formater);
     }
-    closeFile(file);
-    goBack();
 }

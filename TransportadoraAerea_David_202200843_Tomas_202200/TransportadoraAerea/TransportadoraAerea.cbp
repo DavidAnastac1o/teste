@@ -31,13 +31,15 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Aeronave.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="Passageiros.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="adicionarAeronave.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="adicionarAeronave.h" />
 		<Unit filename="adicionarPassageiro.c">
 			<Option compilerVar="CC" />
 		</Unit>

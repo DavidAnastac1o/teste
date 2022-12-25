@@ -9,31 +9,37 @@
 int addPlane(){
     //setup
     setlocale(LC_ALL, "");
-	FILE *file;
-	FILE *file2;
-    int repeatTimes = 0, i = 0, k = 0, counter = 0, numberChoice, aux;
-    printf("Type the number of airplanes you pretend to insert: ");
-    scanf("%d", &repeatTimes);
-    typeAirplane airplane[repeatTimes];
-    typePassenger passengers;
-	char *formater = "", text[100];
+	FILE *File;
+    int RepeatTimes = askInt("Type the number of airplanes you pretend to insert: ");
+    typeAirplane Airplane[RepeatTimes];
 
 	//open file for writing
-	file = fopen ("data/aeronaves.txt", "r+");
-	if (file == NULL){
+	File = fopen ("data/aeronaves.txt", "r+");
+	if (File == NULL){
 		fprintf(stderr, "\nError opened file\n");
 		exit (1);
 	}
 
-	file2 = fopen ("data/passenger.txt", "r");
-	if (file2 == NULL)
+	writeinFileAirplane(Airplane, File, RepeatTimes);
+	closeFile(File);
+	return 1;
+	goBack();
+}
+
+void writeinFileAirplane(typeAirplane *airplane, FILE *file, int repeatTimes){
+    int i = 0, counter = 0, numberChoice, aux;
+    FILE *File;
+    typePassenger Passengers;
+
+    File = fopen ("data/passenger.txt", "r");
+	if (File == NULL)
 	{
 		fprintf(stderr, "\nError opening file\n");
 		exit (1);
 	}
-
+	printf("sim");
 	//gets the last id value
-    while(fread(&airplane, sizeof(typeAirplane), 1, file)){
+    while(fread(&*airplane, sizeof(typeAirplane), 1, file)){
         counter++;
     }
 
@@ -111,12 +117,7 @@ int addPlane(){
             }
         }
 
-        //printing table
-        printf("\n|ID%-8s|NAME%-34s|", formater, formater);
-        //read file contents
-        while(fread(&passengers, sizeof(typePassenger), 1, file2))
-            printf ("\n|%-10d|%-12s %-25s|", passengers.id, passengers.firstName, passengers.lastName);
-
+        printPassangers(Passengers, File);
         //getting passengers
         if(airplane[i].capacity >= 1)
             airplane[i].passengerId1 = askInt("Write Passenger 1 id:");
@@ -133,13 +134,6 @@ int addPlane(){
         //write structure to the file
         fwrite (&airplane[i], sizeof(typeAirplane), 1, file);
     }
+    closeFile(File);
 
-	if(fwrite != 0)
-		printf("\nContents were written to the file successfully !\n");
-	else
-		printf("\nError writing file contents!\n");
-
-	closeFile(file);
-	closeFile(file2);
-	goBack();
 }

@@ -22,4 +22,8 @@ typedef struct{
 	char lastFlight3[20];
 }typeAirplane;
 
+void printAirplane(typeAirplane airplane, FILE *file);
+
+void writeinFileAirplane(typeAirplane *airplane, FILE *file, int repeatTimes);
+
 #endif // AERONAVE_H_INCLUDED

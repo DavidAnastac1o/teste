@@ -11,7 +11,7 @@ typedef struct
 
 void printPassangers(typePassenger passengers, FILE *file);
 
-void writeinFile(typePassenger *passengers, FILE *file, int repeatTimes);
+void writeinFilePassengers(typePassenger *passengers, FILE *file, int repeatTimes);
 
 
 #endif // LISTARPASSAGEIROS_H_INCLUDED
