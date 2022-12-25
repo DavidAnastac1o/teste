@@ -28,7 +28,6 @@ void writeinFile(typePassenger *passengers, FILE *file, int repeatTimes){
     {
         counter++;
     }
-    printf("sim");
 	for (i = 0; i < repeatTimes; i++)
     {
         //get the passenger info

@@ -16,7 +16,7 @@ int addPlane(){
     scanf("%d", &repeatTimes);
     typeAirplane airplane[repeatTimes];
     typePassenger passengers;
-	char *formater = "";
+	char *formater = "", text[100];
 
 	//open file for writing
 	file = fopen ("data/aeronaves.txt", "r+");
@@ -43,7 +43,10 @@ int addPlane(){
         airplane[i].id = counter;
         airplane[i].totalFlights = 0;
         airplane[i].capacity = 0;
-        airplane[i].passengerId = malloc(2 * sizeof(*airplane[i].passengerId));
+        airplane[i].passengerId1 = 0;
+        airplane[i].passengerId2 = 0;
+        airplane[i].passengerId3 = 0;
+        airplane[i].passengerId4 = 0;
         memcpy(airplane[i].lastFlight1, "None", 10);
         memcpy(airplane[i].lastFlight2, "None", 10);
         memcpy(airplane[i].lastFlight3, "None", 10);
@@ -111,18 +114,21 @@ int addPlane(){
         //printing table
         printf("\n|ID%-8s|NAME%-34s|", formater, formater);
         //read file contents
-        while(fread(&passengers, sizeof(typeAirplane), 1, file2))
+        while(fread(&passengers, sizeof(typePassenger), 1, file2))
             printf ("\n|%-10d|%-12s %-25s|", passengers.id, passengers.firstName, passengers.lastName);
 
-        //changing the size of the array tmp is a temporary variable
-        int **tmp = realloc(airplane[i].passengerId, airplane[i].capacity * sizeof(*airplane[i].passengerId));
-        airplane[i].passengerId = tmp;
         //getting passengers
-        for(k=0; k < airplane[i].capacity; k++){
-            printf("\nType the Passenger's id to add him on the airplane: ");
-            scanf("%d", &airplane[i].passengerId[k]);
-            fflush(stdin);
-        }
+        if(airplane[i].capacity >= 1)
+            airplane[i].passengerId1 = askInt("Write Passenger 1 id:");
+
+        if(airplane[i].capacity >= 2)
+            airplane[i].passengerId2 = askInt("Write Passenger 2 id:");
+
+        if(airplane[i].capacity >= 3)
+            airplane[i].passengerId3 = askInt("Write Passenger 3 id:");
+
+        if(airplane[i].capacity >= 4)
+            airplane[i].passengerId4 = askInt("Write Passenger 4 id:");
 
         //write structure to the file
         fwrite (&airplane[i], sizeof(typeAirplane), 1, file);

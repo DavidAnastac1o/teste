@@ -11,8 +11,12 @@ typedef struct{
 	char destiny[20];
 
 	//passengers
-    int** passengerId;
+    int passengerId1;
+    int passengerId2;
+    int passengerId3;
+    int passengerId4;
 
+    //last flight
 	char lastFlight1[20];
 	char lastFlight2[20];
 	char lastFlight3[20];
