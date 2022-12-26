@@ -20,10 +20,14 @@ typedef struct{
 	char lastFlight1[20];
 	char lastFlight2[20];
 	char lastFlight3[20];
+
+	int deleted;
 }typeAirplane;
 
 void printAirplane(typeAirplane airplane, FILE *file);
 
 void writeinFileAirplane(typeAirplane *airplane, FILE *file, int repeatTimes);
+
+void authorize(typeAirplane airplane, FILE *file);
 
 #endif // AERONAVE_H_INCLUDED

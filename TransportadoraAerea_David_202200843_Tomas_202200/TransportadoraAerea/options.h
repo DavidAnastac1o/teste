@@ -3,6 +3,4 @@
 
 void functionCaller (int Choice);
 
-extern int menu();
-extern int listingPassengers();
 #endif // OPTIONS_H_INCLUDED

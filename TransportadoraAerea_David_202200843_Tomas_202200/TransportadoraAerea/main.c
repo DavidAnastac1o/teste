@@ -5,6 +5,8 @@
 
 int main(){
     int choice;
+    cloneFile("data/BUpassenger.txt", "data/passenger.txt");
+    cloneFile("data/BUaeronaves.txt", "data/aeronaves.txt");
 
     while(1){
         //call the function
@@ -35,10 +37,12 @@ void functionCaller (int Choice){
         case 7:
             break;
         case 8:
+            authorizePlane();
             break;
         case 9:
             break;
         case 10:
+            saveFiles();
             break;
         case 11:
             addPassenger();

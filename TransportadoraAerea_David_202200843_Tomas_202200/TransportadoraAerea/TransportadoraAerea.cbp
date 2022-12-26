@@ -43,6 +43,9 @@
 		<Unit filename="adicionarPassageiro.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="autorizar.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="general.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
@@ -62,6 +65,12 @@
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="options.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="salvarInformacao.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="saveFiles.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Extensions>
