@@ -33,6 +33,7 @@ void functionCaller (int Choice){
             addPlane();
             break;
         case 6:
+            deletePlane();
             break;
         case 7:
             break;

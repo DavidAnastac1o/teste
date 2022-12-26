@@ -4,7 +4,7 @@
 #include "Aeronave.h"
 #include "general.h"
 
-int replacePlane(int id, const char *field, const char *newValue) {
+void deletePlane(int id) {
   FILE *File, *Tmp;
   typeAirplane Airplane;
 
@@ -18,15 +18,10 @@ int replacePlane(int id, const char *field, const char *newValue) {
 
   // Read the file line by line
   while (fread(&Airplane, sizeof(typeAirplane), 1, File)) {
-    // If the ID matches, update the field of the structure with the new value
-    if (Airplane.id == id) {
-      if (strcmp(field, "currentState") == 0) {
-        memcpy(Airplane.currentState, newValue, 20);
-      }
+    // If the ID does not match, write the structure to the temporary file
+    if (Airplane.id != id) {
+      fwrite(&Airplane, sizeof(typeAirplane), 1, Tmp);
     }
-
-    // Write the modified or original structure to the temporary file
-    fwrite(&Airplane, sizeof(typeAirplane), 1, Tmp);
   }
 
   // Close both files
@@ -38,12 +33,5 @@ int replacePlane(int id, const char *field, const char *newValue) {
 
   // Rename the temporary file to the original file name
   rename("data/tmp.txt", "data/aeronaves.txt");
-
-  return 0;
 }
 
-int authorizePlane() {
-  replacePlane(2, "currentState", "Ready");
-
-  return 0;
-}
