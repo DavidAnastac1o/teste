@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <conio.h>
+#include <ctype.h>
+#include <stdlib.h>
 #include "menu.h"
 
 int menu(){
@@ -34,7 +36,7 @@ void verifier(char *Confirmation){
     scanf("%c", &*Confirmation);
     fflush(stdin);
     //put the variable in lowercases
-    Confirmation = tolower(Confirmation);
+    *Confirmation = tolower(*Confirmation);
 }
 
 void menuPrinter(int *Choice){

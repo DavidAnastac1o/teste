@@ -26,6 +26,7 @@ int authorizePlane() {
 
 
     goBack();
+    return 1;
 }
 
 void replacePlaneStr(int id, const char *field, const char *newValue) {

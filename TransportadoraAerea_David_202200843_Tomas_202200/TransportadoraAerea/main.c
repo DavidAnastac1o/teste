@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "options.h"
+#include "saveFiles.h"
 
 int main(){
     int choice;
@@ -14,6 +15,7 @@ int main(){
         choice = menu();
         functionCaller(choice);
     }
+    return 1;
 }
 
 void functionCaller (int Choice){

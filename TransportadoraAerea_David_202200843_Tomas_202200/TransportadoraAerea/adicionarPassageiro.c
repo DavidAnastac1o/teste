@@ -47,10 +47,6 @@ void writeinFilePassengers(typePassenger *passengers, FILE *file, int repeatTime
         fwrite (&passengers[i], sizeof(typePassenger), 1, file);
     }
 
-	if(fwrite != 0)
-		printf("\nContents were written to the file successfully !\n");
-	else
-		printf("\nError writing file contents!\n");
 }
 
 int askInt(char *text){

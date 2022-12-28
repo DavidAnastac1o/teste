@@ -2,5 +2,13 @@
 #define OPTIONS_H_INCLUDED
 
 void functionCaller (int Choice);
+int menu();
+int listingPlanes();
+int addPlane();
+int deletePlane();
+int authorizePlane();
+int saveFiles();
+int addPassenger();
+int listingPassengers();
 
 #endif // OPTIONS_H_INCLUDED

@@ -14,6 +14,7 @@ int listingPlanes()
     printAirplane(Airplane, File);
     closeFile(File);
     goBack();
+    return 1;
 }
 
 void printAirplane(typeAirplane airplane, FILE *file){

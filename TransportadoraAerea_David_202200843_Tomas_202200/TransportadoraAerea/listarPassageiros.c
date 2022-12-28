@@ -18,6 +18,7 @@ int listingPassengers(){
 	printPassangers(Passengers, File);
 	closeFile(File);
 	goBack();
+	return 1;
 }
 
 void printPassangers(typePassenger passengers, FILE *file){

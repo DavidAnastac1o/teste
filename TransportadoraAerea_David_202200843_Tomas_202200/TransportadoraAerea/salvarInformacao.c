@@ -8,6 +8,7 @@ int saveFiles() {
     cloneFile("data/aeronaves.txt", "data/BUaeronaves.txt");
     cloneFile("data/idFile.txt", "data/BUidFile.txt");
     goBack();
+    return 1;
 }
 
 void cloneFile(char *sourceText, char *targetText){
