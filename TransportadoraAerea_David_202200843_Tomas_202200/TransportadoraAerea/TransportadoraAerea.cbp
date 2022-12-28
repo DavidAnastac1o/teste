@@ -46,6 +46,9 @@
 		<Unit filename="autorizar.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="eliminarAeronave.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="general.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>

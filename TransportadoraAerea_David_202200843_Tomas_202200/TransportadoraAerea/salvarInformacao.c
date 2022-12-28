@@ -6,6 +6,7 @@
 int saveFiles() {
     cloneFile("data/passenger.txt", "data/BUpassenger.txt");
     cloneFile("data/aeronaves.txt", "data/BUaeronaves.txt");
+    cloneFile("data/idFile.txt", "data/BUidFile.txt");
     goBack();
 }
 

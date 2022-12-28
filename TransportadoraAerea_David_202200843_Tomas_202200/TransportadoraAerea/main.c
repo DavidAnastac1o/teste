@@ -7,6 +7,7 @@ int main(){
     int choice;
     cloneFile("data/BUpassenger.txt", "data/passenger.txt");
     cloneFile("data/BUaeronaves.txt", "data/aeronaves.txt");
+    cloneFile("data/BUidFile.txt", "data/idFile.txt");
 
     while(1){
         //call the function

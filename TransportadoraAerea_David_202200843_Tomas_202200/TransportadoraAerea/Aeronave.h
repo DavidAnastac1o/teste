@@ -17,11 +17,9 @@ typedef struct{
     int passengerId4;
 
     //last flight
-	char lastFlight1[20];
-	char lastFlight2[20];
-	char lastFlight3[20];
-
-	int deleted;
+	char lastFlight1[40];
+	char lastFlight2[40];
+	char lastFlight3[40];
 }typeAirplane;
 
 void printAirplane(typeAirplane airplane, FILE *file);
@@ -29,5 +27,7 @@ void printAirplane(typeAirplane airplane, FILE *file);
 void writeinFileAirplane(typeAirplane *airplane, FILE *file, int repeatTimes);
 
 void authorize(typeAirplane airplane, FILE *file);
+
+void deleteAirplane(int id);
 
 #endif // AERONAVE_H_INCLUDED

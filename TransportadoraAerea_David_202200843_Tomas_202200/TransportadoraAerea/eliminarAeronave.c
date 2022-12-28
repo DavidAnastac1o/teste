@@ -4,17 +4,31 @@
 #include "Aeronave.h"
 #include "general.h"
 
-void deletePlane(int id) {
+void deletePlane() {
+    FILE *File;
+    typeAirplane Airplane;
+    File = fopen("data/aeronaves.txt", "r+");
+
+    printAirplane(Airplane, File);
+    int ID = askInt("\n\nWrite the number of the ID of the airplane that you want to delete: ");
+    deleteAirplane(ID);
+
+    fclose(File);
+    // Delete the original file
+    remove("data/aeronaves.txt");
+
+    // Rename the temporary file to the original file name
+    rename("data/tmp.txt", "data/aeronaves.txt");
+
+    goBack();
+}
+
+void deleteAirplane(int id){
   FILE *File, *Tmp;
   typeAirplane Airplane;
 
-  // Open aeronaves.txt and tmp.txt in read-write mode
   File = fopen("data/aeronaves.txt", "r+");
   Tmp = fopen("data/tmp.txt", "w");
-  if (File == NULL || Tmp == NULL) {
-    fprintf(stderr, "\n\nERROR: Unable to open the file\n");
-    exit(1);
-  }
 
   // Read the file line by line
   while (fread(&Airplane, sizeof(typeAirplane), 1, File)) {
@@ -27,11 +41,5 @@ void deletePlane(int id) {
   // Close both files
   fclose(File);
   fclose(Tmp);
-
-  // Delete the original file
-  remove("data/aeronaves.txt");
-
-  // Rename the temporary file to the original file name
-  rename("data/tmp.txt", "data/aeronaves.txt");
 }
 

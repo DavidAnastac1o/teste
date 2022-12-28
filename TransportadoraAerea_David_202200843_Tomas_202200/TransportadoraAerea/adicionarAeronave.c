@@ -27,37 +27,37 @@ int addPlane(){
 }
 
 void writeinFileAirplane(typeAirplane *airplane, FILE *file, int repeatTimes){
-    int i = 0, counter = 0, numberChoice, aux, maxAirplanes;
+    int i = 0, counter = 0, numberChoice, aux, id, maxAeronaves;
     FILE *File;
+    FILE *IdFile;
     typePassenger Passengers;
 
-    File = fopen ("data/passenger.txt", "r");
-	if (File == NULL)
-	{
-		fprintf(stderr, "\nError opening file\n");
-		exit (1);
-	}
 	//gets the last id value
     while(fread(&*airplane, sizeof(typeAirplane), 1, file)){
         counter++;
     }
-    maxAirplanes = repeatTimes + counter;
-    if(counter < 10 && maxAirplanes <= 10){
+    maxAeronaves = repeatTimes + counter;
+    if(counter <= 10 && maxAeronaves <= 10){
         for (i = 0; i<repeatTimes; i++){
+            File = fopen ("data/passenger.txt", "r");
+            IdFile = fopen("data/idFile.txt", "r+");
+            fscanf(IdFile, "%d", &id);
+            id++;
             //get the airplane default info
-            counter++;
-            airplane[i].id = counter;
+            airplane[i].id = id;
             airplane[i].totalFlights = 0;
             airplane[i].capacity = 0;
             airplane[i].passengerId1 = 0;
             airplane[i].passengerId2 = 0;
             airplane[i].passengerId3 = 0;
             airplane[i].passengerId4 = 0;
-            airplane[i].deleted = 0;
-            memcpy(airplane[i].lastFlight1, "None", 10);
-            memcpy(airplane[i].lastFlight2, "None", 10);
-            memcpy(airplane[i].lastFlight3, "None", 10);
+            memcpy(airplane[i].lastFlight1, "None", 40);
+            memcpy(airplane[i].lastFlight2, "None", 40);
+            memcpy(airplane[i].lastFlight3, "None", 40);
             memcpy(airplane[i].currentState, "Authorization", 20);
+            IdFile = freopen("data/idFile.txt", "w", IdFile);
+            fprintf(IdFile, "%d", id);
+            closeFile(IdFile);
 
             //getting capacity
             while(airplane[i].capacity < 2 || airplane[i].capacity > 4){
@@ -121,24 +121,24 @@ void writeinFileAirplane(typeAirplane *airplane, FILE *file, int repeatTimes){
             printPassangers(Passengers, File);
             //getting passengers
             if(airplane[i].capacity >= 1)
-                airplane[i].passengerId1 = askInt("Write Passenger 1 id:");
+                airplane[i].passengerId1 = askInt("\nWrite Passenger 1 id:");
 
             if(airplane[i].capacity >= 2)
-                airplane[i].passengerId2 = askInt("Write Passenger 2 id:");
+                airplane[i].passengerId2 = askInt("\nWrite Passenger 2 id:");
 
             if(airplane[i].capacity >= 3)
-                airplane[i].passengerId3 = askInt("Write Passenger 3 id:");
+                airplane[i].passengerId3 = askInt("\nWrite Passenger 3 id:");
 
             if(airplane[i].capacity >= 4)
-                airplane[i].passengerId4 = askInt("Write Passenger 4 id:");
+                airplane[i].passengerId4 = askInt("\nWrite Passenger 4 id:");
 
             //write structure to the file
             fwrite (&airplane[i], sizeof(typeAirplane), 1, file);
+            closeFile(File);
         }
     }
     else{
         printf("\n\n\tERROR: The mas number of airplanes was already reached");
     }
-    closeFile(File);
 
 }
