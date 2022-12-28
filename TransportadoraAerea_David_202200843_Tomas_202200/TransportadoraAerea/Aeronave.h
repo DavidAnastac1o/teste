@@ -30,4 +30,10 @@ void authorize(typeAirplane airplane, FILE *file);
 
 void deleteAirplane(int id);
 
+void replacePlaneStr(int id, const char *field, const char *newValue);
+
+int replacePlaneAddFly(int id, const char *field);
+
+void replacePlaneUpdateLastFlights(int id, const char *field);
+
 #endif // AERONAVE_H_INCLUDED

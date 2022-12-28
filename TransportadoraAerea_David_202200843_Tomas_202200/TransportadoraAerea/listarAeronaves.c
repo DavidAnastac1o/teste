@@ -26,7 +26,7 @@ void printAirplane(typeAirplane airplane, FILE *file){
         temporary[0][1] = airplane.passengerId2;
         temporary[0][2] = airplane.passengerId3;
         temporary[0][3] = airplane.passengerId4;
-        printf ("\n\t|%-10d|%-10d|%-14d|%-14s|%-16s|%-19s|", airplane.id, airplane.capacity, airplane.totalFlights, airplane.currentState, airplane.location, airplane.destiny);
+        printf ("\n\t|%-10d|%-10d|%-14d|%-14s|%-16s|%-19s|", airplane.id, airplane.capacity, airplane.totalFlights, airplane.currentState, airplane.location, airplane.lastFlight1);
 
         for (i = 0; i < airplane.capacity; i++) {
             printf(" %d", temporary[0][i]);
