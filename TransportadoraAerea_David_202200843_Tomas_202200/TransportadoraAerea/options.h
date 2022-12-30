@@ -10,5 +10,8 @@ int authorizePlane();
 int saveFiles();
 int addPassenger();
 int listingPassengers();
+int listingPlanesById();
+int listingPlanesWaiting();
+int listingPlanesReady();
 
 #endif // OPTIONS_H_INCLUDED

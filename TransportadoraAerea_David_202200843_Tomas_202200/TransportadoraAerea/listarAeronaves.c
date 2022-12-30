@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 #include <string.h>
 #include "Aeronave.h"
 #include "Passageiros.h"
@@ -7,6 +8,7 @@
 
 int listingPlanes()
 {
+    setlocale(LC_ALL, "");
 	FILE *File;
 	typeAirplane Airplane;
 
@@ -27,7 +29,7 @@ void printAirplane(typeAirplane airplane, FILE *file){
     File = fopen ("data/passenger.txt", "r+");
     char *formater = "", name[20], temporary[1][4][40];
     int i;
-    printf("\n\t|ID%-8s|CAPACITY%-2s|TOTAL FLIGHTS%-1s|STATUS%-8s|Location%-8s|Destination%-8s|Passengers Id's%-5s|", formater, formater, formater, formater, formater, formater, formater);
+    printf("\nID%-2s|CAPACITY%-2s|TOTAL FLIGHTS%-1s|STATUS%-8s|Location%-4s|Destination%-1s|Last Flight 1%-8s|Last Flight 2%-8s|Last Flight 3%-8s|Passengers Name", formater, formater, formater, formater, formater, formater, formater, formater, formater);
     //read file contents
     while(fread(&airplane, sizeof(typeAirplane), 1, file)){
         rewind(File);
@@ -58,13 +60,13 @@ void printAirplane(typeAirplane airplane, FILE *file){
                 }
             }
         }
-
-        printf ("\n\t|%-10d|%-10d|%-14d|%-14s|%-16s|%-19s|", airplane.id, airplane.capacity, airplane.totalFlights, airplane.currentState, airplane.location, airplane.destiny);
+        printf ("\n%-4d|%-10d|%-14d|%-14s|%-12s|%-12s|%-21s|%-21s|%-21s|", airplane.id, airplane.capacity, airplane.totalFlights, airplane.currentState, airplane.location, airplane.destiny, airplane.lastFlight1, airplane.lastFlight2, airplane.lastFlight3);
         for (i = 0; i < airplane.capacity; i++) {
-            printf(" %s", temporary[0][i]);
+            printf("%s", temporary[0][i]);
             if (i != airplane.capacity-1)
-                printf(",");
+                printf(";\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                  |");
         }
+        printf(".\n");
     }
     closeFile(File);
 }

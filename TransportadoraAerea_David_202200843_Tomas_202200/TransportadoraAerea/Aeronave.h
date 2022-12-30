@@ -22,6 +22,8 @@ typedef struct{
 	char lastFlight3[40];
 }typeAirplane;
 
+void printAirplaneById(typeAirplane airplane, FILE *file, int ID);
+
 void printAirplane(typeAirplane airplane, FILE *file);
 
 void writeinFileAirplane(typeAirplane *airplane, FILE *file, int repeatTimes);
@@ -35,5 +37,9 @@ void replacePlaneStr(int id, const char *field, const char *newValue);
 int replacePlaneAddFly(int id, const char *field);
 
 void replacePlaneUpdateLastFlights(int id, const char *field);
+
+void printAirplaneReady(typeAirplane airplane, FILE *file);
+
+void printAirplaneWaiting(typeAirplane airplane, FILE *file);
 
 #endif // AERONAVE_H_INCLUDED

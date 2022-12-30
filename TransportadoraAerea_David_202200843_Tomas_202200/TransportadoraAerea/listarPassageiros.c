@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <locale.h>
 #include "Passageiros.h"
 #include "general.h"
 
 int listingPassengers(){
+    setlocale(LC_ALL, "");
 	FILE *File;
 	typePassenger Passengers;
 

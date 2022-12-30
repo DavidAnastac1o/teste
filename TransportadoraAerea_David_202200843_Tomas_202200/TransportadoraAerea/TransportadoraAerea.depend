@@ -8,14 +8,14 @@
 	"Passageiros.h"
 	"general.h"
 
-1672349508 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\main.c
+1672431116 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"options.h"
 	"saveFiles.h"
 
-1672264332 c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\options.h
+1672419577 c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\options.h
 
 1672349338 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\menu.c
 	<stdio.h>
@@ -33,18 +33,20 @@
 	"Passageiros.h"
 	"general.h"
 
-1672357690 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\listaraeronaves.c
+1672431295 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\listaraeronaves.c
 	<stdio.h>
 	<stdlib.h>
+	<locale.h>
 	<string.h>
 	"Aeronave.h"
 	"Passageiros.h"
 	"general.h"
 
-1672264126 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\listarpassageiros.c
+1672419370 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\listarpassageiros.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	<locale.h>
 	"Passageiros.h"
 	"general.h"
 
@@ -52,7 +54,7 @@
 
 1672358052 c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\general.h
 
-1672254621 c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\aeronave.h
+1672431720 c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\aeronave.h
 
 1672264448 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\salvarinformacao.c
 	<stdio.h>
@@ -62,17 +64,44 @@
 
 1672087627 c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\savefiles.h
 
-1672264100 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\autorizar.c
+1672422548 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\autorizar.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Aeronave.h"
 	"general.h"
 
-1672188576 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\eliminaraeronave.c
+1672422552 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\eliminaraeronave.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Aeronave.h"
+	"general.h"
+
+1672419659 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\listaraeronavesporid.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	"Aeronave.h"
+	"Passageiros.h"
+	"general.h"
+
+1672431551 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\listaraeronavesprontas.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	"Aeronave.h"
+	"Passageiros.h"
+	"general.h"
+
+1672431654 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\listaraeronavesaguardando.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	"Aeronave.h"
+	"Passageiros.h"
 	"general.h"
 

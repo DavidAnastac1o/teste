@@ -27,10 +27,13 @@ void functionCaller (int Choice){
             listingPlanes();
             break;
         case 2:
+            listingPlanesReady();
             break;
         case 3:
+            listingPlanesWaiting();
             break;
         case 4:
+            listingPlanesById();
             break;
         case 5:
             addPlane();
