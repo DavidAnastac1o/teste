@@ -54,7 +54,7 @@ void menuPrinter(int *Choice){
     printf("\t\t7.\tEditar Aeronave\n");
     printf("\t\t8.\tAutorizar Voo\n");
     printf("\t\t9.\tCancelar Voo\n");
-    printf("\t\t10.\tGravar Listagem de Aeronaves\n");
+    printf("\t\t10.\tGravar Listagem\n");
     printf("\t\t11.\tAdicionar Passageiros\n");
     printf("\t\t12.\tListar Passageiros\n\n");
     printf("\t\t0.\tSair\n\n");

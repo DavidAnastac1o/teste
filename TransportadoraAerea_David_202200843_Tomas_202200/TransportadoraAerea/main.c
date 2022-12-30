@@ -24,11 +24,11 @@ void functionCaller (int Choice){
             printf("\n\tProgram finishing executing...\n\n\n");
             exit(0);
         case 1:
+            listingPlanes();
             break;
         case 2:
             break;
         case 3:
-            listingPlanes();
             break;
         case 4:
             break;
