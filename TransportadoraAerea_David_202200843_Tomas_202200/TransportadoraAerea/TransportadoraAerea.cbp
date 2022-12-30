@@ -55,6 +55,15 @@
 		<Unit filename="listarAeronaves.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="listarAeronavesAguardando.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="listarAeronavesPorId.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="listarAeronavesProntas.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="listarPassageiros.c">
 			<Option compilerVar="CC" />
 		</Unit>
