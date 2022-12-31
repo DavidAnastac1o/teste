@@ -128,6 +128,8 @@ void replacePlaneUpdateLastFlights(int id, const char *field){
                 strcat(newValue, " to ");
                 strcat(newValue, Airplane.destiny);
                 memcpy(Airplane.lastFlight1, newValue, 40);
+                memcpy(Airplane.location, Airplane.destiny, 20);
+                memcpy(Airplane.destiny, "None", 20);
             }
         }
 

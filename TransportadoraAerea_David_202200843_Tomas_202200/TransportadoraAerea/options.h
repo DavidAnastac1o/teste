@@ -14,5 +14,6 @@ int listingPlanesById();
 int listingPlanesWaiting();
 int listingPlanesReady();
 int cancelPlane();
+int editPlane();
 
 #endif // OPTIONS_H_INCLUDED

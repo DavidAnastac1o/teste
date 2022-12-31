@@ -42,6 +42,7 @@ void functionCaller (int Choice){
             deletePlane();
             break;
         case 7:
+            editPlane();
             break;
         case 8:
             authorizePlane();
