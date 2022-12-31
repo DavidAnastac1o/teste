@@ -47,6 +47,7 @@ void functionCaller (int Choice){
             authorizePlane();
             break;
         case 9:
+            cancelPlane();
             break;
         case 10:
             saveFiles();

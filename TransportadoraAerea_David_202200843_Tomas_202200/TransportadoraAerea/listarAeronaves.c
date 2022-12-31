@@ -49,8 +49,9 @@ void printAirplane(typeAirplane airplane, FILE *file){
         i++;
     }
     qsort(numbers, counter, sizeof(int), compare);
-    while(k < counter-1){
+    while(k < counter){
         rewind(file);
+        //printf("\nRepetir\n");
         while(fread(&airplane, sizeof(typeAirplane), 1, file)){
             rewind(File);
             while(fread(&Passenger, sizeof(typePassenger), 1, File)){
@@ -80,8 +81,15 @@ void printAirplane(typeAirplane airplane, FILE *file){
                     }
                 }
             }
+            //2 1 3
+            //1 0 0
+            //1 2 3
+            //0 1 0 numbers
             for(j = 0; j < counter; j++){
+                //printf("\n%d numero, %d ID1\n", aux[j], airplane.id);
+                //printf("\n%d numeros de voos, %d Da estrutura", numbers[k], airplane.totalFlights);
                 if(numbers[k] == airplane.totalFlights && aux[j] != airplane.id){
+                    //printf("\n\nPassou\n\n");
                     printf ("\n%-4d|%-10d|%-14d|%-14s|%-12s|%-12s|%-21s|%-21s|%-21s|", airplane.id, airplane.capacity, airplane.totalFlights, airplane.currentState, airplane.location, airplane.destiny, airplane.lastFlight1, airplane.lastFlight2, airplane.lastFlight3);
                     for (i = 0; i < airplane.capacity; i++) {
                         printf("%s", temporary[0][i]);
@@ -90,11 +98,11 @@ void printAirplane(typeAirplane airplane, FILE *file){
                     }
                     printf(".\n");
                     aux[k] = airplane.id;
+                    k++;
                     break;
                 }
             }
         }
-        k++;
     }
     closeFile(File);
 }
