@@ -33,7 +33,7 @@
 	"Passageiros.h"
 	"general.h"
 
-1672545533 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\listaraeronaves.c
+1672590058 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\listaraeronaves.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
@@ -54,7 +54,7 @@
 
 1672358052 c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\general.h
 
-1672542994 c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\aeronave.h
+1672587618 c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\aeronave.h
 
 1672264448 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\salvarinformacao.c
 	<stdio.h>
@@ -78,7 +78,7 @@
 	"Aeronave.h"
 	"general.h"
 
-1672419659 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\listaraeronavesporid.c
+1672590073 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\listaraeronavesporid.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
@@ -105,17 +105,18 @@
 	"Passageiros.h"
 	"general.h"
 
-1672519069 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\cancelar.c
+1672545590 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\cancelar.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Aeronave.h"
 	"general.h"
 
-1672545355 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\editaraeronave.c
+1672586605 source:c:\users\david\desktop\files\code\git\transportadoraaerea_david_202200843_tomas_202200\transportadoraaerea\editaraeronave.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Aeronave.h"
+	"Passageiros.h"
 	"general.h"
 

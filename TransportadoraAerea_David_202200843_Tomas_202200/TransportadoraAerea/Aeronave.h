@@ -44,4 +44,6 @@ void printAirplaneWaiting(typeAirplane airplane, FILE *file);
 
 void editAirplane(int id);
 
+void subMenu();
+
 #endif // AERONAVE_H_INCLUDED

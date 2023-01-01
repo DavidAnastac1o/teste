@@ -46,6 +46,12 @@
 		<Unit filename="autorizar.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="cancelar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="editarAeronave.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="eliminarAeronave.c">
 			<Option compilerVar="CC" />
 		</Unit>

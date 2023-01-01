@@ -70,6 +70,18 @@ void printAirplane(typeAirplane airplane, FILE *file){
                 if(airplane.passengerId4 == Passenger.id){
                     strcpy(temporary[0][3], name);
                 }
+                if(airplane.passengerId1 == -1){
+                    strcpy(temporary[0][0], "Empty");
+                }
+                if(airplane.passengerId2 == -1){
+                    strcpy(temporary[0][1], "Empty");
+                }
+                if(airplane.passengerId3 == -1){
+                    strcpy(temporary[0][2], "Empty");
+                }
+                if(airplane.passengerId4 == -1){
+                    strcpy(temporary[0][3], "Empty");
+                }
             }
 
             // Sort the temporary array alphabetically
