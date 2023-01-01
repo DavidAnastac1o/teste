@@ -54,6 +54,8 @@ void printAirplane(typeAirplane airplane, FILE *file){
         //printf("\nRepetir\n");
         while(fread(&airplane, sizeof(typeAirplane), 1, file)){
             rewind(File);
+            strcpy(temporary[0][2], "Empty");
+            strcpy(temporary[0][3], "Empty");
             while(fread(&Passenger, sizeof(typePassenger), 1, File)){
                 sprintf(name, "%s %s", Passenger.firstName, Passenger.lastName);
                 if(airplane.passengerId1 == Passenger.id){
@@ -73,7 +75,7 @@ void printAirplane(typeAirplane airplane, FILE *file){
             // Sort the temporary array alphabetically
             for (i = 0; i < airplane.capacity; i++) {
                 for (j = i + 1; j < airplane.capacity; j++) {
-                    if (strcmp(temporary[0][i], temporary[0][j]) > 0) {
+                    if (strcmp(temporary[0][i], temporary[0][j]) > 0 && temporary[0][i] != "Empty") {
                         char temp[40];
                         strcpy(temp, temporary[0][i]);
                         strcpy(temporary[0][i], temporary[0][j]);

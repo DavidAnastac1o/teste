@@ -12,7 +12,7 @@ int cancelPlane() {
     closeFile(File);
 
     int FlightsVerifier, id = askInt("\n\nWrite the ID of the airplane to cancel the flight: ");
-    replacePlaneStr(id, "currentState", "Authorize");
+    replacePlaneStr(id, "currentState", "Authorization");
 
 
     goBack();
