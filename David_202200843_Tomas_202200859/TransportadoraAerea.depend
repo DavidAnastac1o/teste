@@ -366,3 +366,126 @@
 	"saveFiles.h"
 	"general.h"
 
+1673002990 source:c:\users\david\desktop\files\code\git\david_202200843_tomas_202200859\adicionaraeronave.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	"Aeronave.h"
+	"Passageiros.h"
+	"general.h"
+
+1673002030 c:\users\david\desktop\files\code\git\david_202200843_tomas_202200859\aeronave.h
+
+1672592364 c:\users\david\desktop\files\code\git\david_202200843_tomas_202200859\passageiros.h
+
+1672592364 c:\users\david\desktop\files\code\git\david_202200843_tomas_202200859\general.h
+
+1672592364 source:c:\users\david\desktop\files\code\git\david_202200843_tomas_202200859\adicionarpassageiro.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Passageiros.h"
+	"general.h"
+
+1673003016 source:c:\users\david\desktop\files\code\git\david_202200843_tomas_202200859\autorizar.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Aeronave.h"
+	"general.h"
+
+1673003032 source:c:\users\david\desktop\files\code\git\david_202200843_tomas_202200859\cancelar.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Aeronave.h"
+	"general.h"
+
+1672592364 source:c:\users\david\desktop\files\code\git\david_202200843_tomas_202200859\eliminaraeronave.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Aeronave.h"
+	"general.h"
+
+1673032368 source:c:\users\david\desktop\files\code\git\david_202200843_tomas_202200859\listaraeronaves.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	"Aeronave.h"
+	"Passageiros.h"
+	"general.h"
+
+1673002492 source:c:\users\david\desktop\files\code\git\david_202200843_tomas_202200859\listaraeronavesaguardando.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	"Aeronave.h"
+	"Passageiros.h"
+	"general.h"
+
+1673032420 source:c:\users\david\desktop\files\code\git\david_202200843_tomas_202200859\listaraeronavesporid.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	"Aeronave.h"
+	"Passageiros.h"
+	"general.h"
+
+1673031862 source:c:\users\david\desktop\files\code\git\david_202200843_tomas_202200859\listaraeronavesprontas.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	"Aeronave.h"
+	"Passageiros.h"
+	"general.h"
+
+1672592364 source:c:\users\david\desktop\files\code\git\david_202200843_tomas_202200859\listarpassageiros.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"Passageiros.h"
+	"general.h"
+
+1672592364 source:c:\users\david\desktop\files\code\git\david_202200843_tomas_202200859\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"options.h"
+	"saveFiles.h"
+
+1672592364 c:\users\david\desktop\files\code\git\david_202200843_tomas_202200859\options.h
+
+1672592364 c:\users\david\desktop\files\code\git\david_202200843_tomas_202200859\savefiles.h
+
+1672592364 source:c:\users\david\desktop\files\code\git\david_202200843_tomas_202200859\menu.c
+	<stdio.h>
+	<conio.h>
+	<ctype.h>
+	<stdlib.h>
+	"menu.h"
+
+1672592364 c:\users\david\desktop\files\code\git\david_202200843_tomas_202200859\menu.h
+
+1672913856 source:c:\users\david\desktop\files\code\git\david_202200843_tomas_202200859\salvarinformacao.c
+	<stdio.h>
+	<stdlib.h>
+	"saveFiles.h"
+	"general.h"
+
+1673111065 source:c:\users\david\desktop\files\code\git\david_202200843_tomas_202200859\editaraeronave.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"menu.h"
+	"Aeronave.h"
+	"Passageiros.h"
+	"general.h"
+

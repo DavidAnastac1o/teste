@@ -99,17 +99,14 @@ void editAirplane(int id){
                         else if(Airplane.passengerId4 == changeChoice)
                             Airplane.passengerId4 = changeAux;
                         else
-                            printf("ERROR: Passenger ID not available on this airplane.")
+                            printf("ERROR: Passenger ID not available on this airplane.");
                     }
 
                     //add
                     else if(passengerChoice == 2){
                         printPassangers(Passengers, file);
                         changeAux = askInt("\nChoose the passenger ID you want to add: ");
-                        changeChoice = -1;
-                        if(Airplane.capacity >= 4){
-                            printf("\nERROR: There is no free spots");
-                        }
+                        changeChoice = 0;
 
                         if(Airplane.passengerId1 == changeChoice || Airplane.capacity == 1)
                             Airplane.passengerId1 = changeAux;
@@ -126,9 +123,8 @@ void editAirplane(int id){
 
                     //remove
                     else if(passengerChoice == 3){
-                        while(changeChoice < 1 || changeChoice > Airplane.capacity)
-                            changeChoice = askInt("\nChoose a passenger ID to remove from the airplane: ");
-                        changeAux = -1;
+                        changeChoice = askInt("\nChoose a passenger ID to remove from the airplane: ");
+                        changeAux = 0;
                         if(Airplane.passengerId1 == changeChoice)
                             Airplane.passengerId1 = changeAux;
                         else if(Airplane.passengerId2 == changeChoice)
@@ -137,6 +133,12 @@ void editAirplane(int id){
                             Airplane.passengerId3 = changeAux;
                         else if(Airplane.passengerId4 == changeChoice)
                             Airplane.passengerId4 = changeAux;
+                        else{
+                            printf("\nERROR: No passenger corresponds to the ID typed.");
+                        }
+                        if(Airplane.passengerId1 == changeAux && Airplane.passengerId2 == changeAux && Airplane.passengerId3 == changeAux && Airplane.passengerId4 == changeAux){
+                            memcpy(Airplane.currentState, "In preparation", 25);
+                        }
 
                     }
                     else if(passengerChoice == 4){
