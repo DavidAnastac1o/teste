@@ -1,21 +1,6 @@
-import fs from 'fs';
-
 //variables
 let menu = document.querySelector("#menu-bars");
 let navbar = document.querySelector(".navbar");
-
-function saveData(){
-    const lines = ['Line 1', 'Line 2', 'Line 3'];
-
-    // Convert the array to a string
-    const data = lines.join('\n');
-
-    fs.writeFile('../data/file.txt', data, (err) => {
-        if (err) throw err;
-        alert('Data written to file');
-    });
-    
-}
 
 //set bar to deactive by deault
 navbar.classList.toggle('active')
