@@ -585,6 +585,33 @@ form h1{
     font-weight: bold;
 }
 
+#comment{
+    background-color: #062d4b;
+    color: var(--dark_text-color);
+    width: 100%;
+    resize: none;
+    border: #062d4b solid 1rem;
+}
+
+.btn_comments{
+    background-color: var(--dark_main-color);
+    color: var(--dark_text-color);
+    width: 10rem;
+    height: 4rem;
+    border: var(--dark_main-color) solid 1rem;
+}
+
+.btn_comments:hover{
+    background-color: var(--dark_highlight-color) ;
+    border: var(--dark_highlight-color) solid 1rem;
+}
+
+#commentsArea{
+    color: var(--dark_text-color);
+    padding-top: 4rem;
+    width: 100%;
+}
+
 /*media query*/
 
 @media(max-width: 991px) {
