@@ -58,57 +58,59 @@ var swiper = new Swiper(".anime-slider", {
     centeredSlides: true,
     breakpoints: {
         320: {
-         slidesPerView: 2,
-         spaceBetween: 20
+            slidesPerView: 2,
+            spaceBetween: 20
         },
         580: {
-         slidesPerView: 3,
-         spaceBetween: 30
+            slidesPerView: 3,
+            spaceBetween: 30
         },
         740: {
-         slidesPerView: 4,
-         spaceBetween: 40
+            slidesPerView: 4,
+            spaceBetween: 40
         }
-       },
-    autoplay: {
-        delay: 4500,
-        disableOnInteraction: false,
     },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
     },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
     loop: true
 });
 
-var swiper = new Swiper(".season-slider", {
+var swiper = new Swiper('.season-slider', {
     slidesPerView: 4,
     spaceBetween: 30,
     centeredSlides: true,
     breakpoints: {
         320: {
-         slidesPerView: 2,
-         spaceBetween: 20
+            slidesPerView: 2,
+            spaceBetween: 20
         },
         580: {
-         slidesPerView: 3,
-         spaceBetween: 30
+            slidesPerView: 3,
+            spaceBetween: 30
         },
         740: {
-         slidesPerView: 4,
-         spaceBetween: 40
+            slidesPerView: 4,
+            spaceBetween: 40
         }
-       },
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
     },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
     },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
     loop: true
 });
+
+
 
 var swiper = new Swiper(".recommendation-slider", {
     slidesPerView: 4,
@@ -116,27 +118,36 @@ var swiper = new Swiper(".recommendation-slider", {
     centeredSlides: true,
     breakpoints: {
         320: {
-         slidesPerView: 2,
-         spaceBetween: 20
+            slidesPerView: 2,
+            spaceBetween: 20
         },
         580: {
-         slidesPerView: 3,
-         spaceBetween: 30
+            slidesPerView: 3,
+            spaceBetween: 30
         },
         740: {
-         slidesPerView: 4,
-         spaceBetween: 40
+            slidesPerView: 4,
+            spaceBetween: 40
         }
-       },
-    autoplay: {
-        delay: 1500,
-        disableOnInteraction: false,
     },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
     },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
     loop: true
 });
 
+var nextButton = swiper.navigation.nextEl;
+var prevButton = swiper.navigation.prevEl;
 
+nextButton.addEventListener('click', function() {
+    swiper.slideNext();
+});
+
+prevButton.addEventListener('click', function() {
+    swiper.slidePrev();
+});

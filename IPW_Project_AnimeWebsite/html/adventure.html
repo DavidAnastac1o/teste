@@ -49,13 +49,13 @@
                 </div>
 
                 <!--<a href="#topico">topico</a>-->
-            </nav>
+                        </nav>
             <div class="icons">
                 <i class="fas fa-bars" id="menu-bars"></i>
-                <i class="fas fa-search" id="search-icon"></i>
-                <i class="fas fa-gear" id="gear"></i>
             </div>
+
         </header>
+
         <br><br><br><br><br><br><br><br>
         <!-- adventure section start -->
         <section>
@@ -113,6 +113,36 @@
         </div>
 
         <!-- Javascript -->
+        <script>
+            window.onload = function() {
+                let animes_important = JSON.parse(localStorage.getItem("animes_important")) || []; // get the animes_important array from localstorage
+                for (let animes_importants of animes_important) {
+                    if(animes_importants.genre === "adventure") {
+                        let container = document.getElementById("customBox");
+                        let responsiveDiv = document.createElement("div");
+                        responsiveDiv.classList.add("responsive");
+                        container.appendChild(responsiveDiv);
+
+                        let boxDiv = document.createElement("div");
+                        boxDiv.classList.add("box");
+                        boxDiv.style.background = `url(${animes_importants.image}) no-repeat`;
+                        responsiveDiv.appendChild(boxDiv);
+
+                        let contentDiv = document.createElement("div");
+                        contentDiv.classList.add("content");
+                        responsiveDiv.appendChild(contentDiv);
+
+                        let h3 = document.createElement("h3");
+                        h3.innerHTML = animes_importants.name;
+                        contentDiv.appendChild(h3);
+
+                        let p = document.createElement("p");
+                        p.innerHTML = `${animes_importants.description} <a href='chainsaw_man/chainsaw_man.html'>[Read More]</a>`;
+                        contentDiv.appendChild(p);
+                    }
+                }
+            }
+        </script>
         <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
         <script src="../js/main.js"></script>
     </body>
