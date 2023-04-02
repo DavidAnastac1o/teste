@@ -1,0 +1,78 @@
+Criar um novo repositório:
+csharp
+Copy code
+$ git init
+
+Adicionar arquivos ao repositório:
+csharp
+Copy code
+$ git add <nome_do_arquivo>
+
+ou
+
+csharp
+Copy code
+$ git add .
+
+Confirmar as mudanças feitas:
+ruby
+Copy code
+$ git commit -m "mensagem do commit"
+
+Verificar o estado atual do repositório:
+lua
+Copy code
+$ git status
+
+Verificar o histórico de commits:
+shell
+Copy code
+$ git log
+
+Mudar de repositório:
+shell
+Copy code
+$ cd <caminho_do_repositório>
+
+Verificar as mudanças feitas em um arquivo:
+php
+Copy code
+$ git diff <nome_do_arquivo>
+
+Enviar as mudanças para o repositório remoto:
+perl
+Copy code
+$ git push
+
+Clonar um repositório existente:
+shell
+Copy code
+$ git clone <url_do_repositório>
+
+Verificar as diferenças entre o repositório local e o remoto:
+php
+Copy code
+$ git fetch
+$ git diff <nome_da_branch_local> origin/<nome_da_branch_remota>
+
+git remote show origin
+
+$ git remote set-url origin https://github.com/seu_usuario/novo_repositorio.git
+
+commands:
+git status
+git add .
+git commit -m ""
+git push origin master
+
+to do for a different project create a new repo
+
+
+To change the repository that you are uploading files to in Git Bash, you will need to use the "git remote" command to update the remote repository location.
+Here are the steps you can follow:
+
+Use the command "git remote -v" to view the current remote repository location.
+Use the command "git remote remove origin" to remove the current remote repository.
+Use the command "git remote add origin [new repository URL]" to add the new remote repository URL.
+Use the command "git push -u origin master" to push your changes to the new repository.
+Please note that you must replace [new repository URL] with the actual URL of the new repository you want to use.
