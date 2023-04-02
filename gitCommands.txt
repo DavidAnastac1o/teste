@@ -1,3 +1,66 @@
+ABRIR O FICHEIRO COM O GIT BASH(clicar com o botao do lado direito)
+
+Criar um novo repositório:
+csharp
+Copy code
+$ git init
+
+Adicionar arquivos ao repositório:
+csharp
+Copy code
+$ git add <nome_do_arquivo>
+
+ou
+
+csharp
+Copy code
+$ git add .
+
+Confirmar as mudanças feitas:
+ruby
+Copy code
+$ git commit -m "mensagem do commit"
+
+Verificar o estado atual do repositório:
+lua
+Copy code
+$ git status
+
+Verificar o histórico de commits:
+shell
+Copy code
+$ git log
+
+Mudar de repositório:
+shell
+Copy code
+$ cd <caminho_do_repositório>
+
+Verificar as mudanças feitas em um arquivo:
+php
+Copy code
+$ git diff <nome_do_arquivo>
+
+Enviar as mudanças para o repositório remoto:
+perl
+Copy code
+$ git push
+
+Clonar um repositório existente:
+shell
+Copy code
+$ git clone <url_do_repositório>
+
+Verificar as diferenças entre o repositório local e o remoto:
+php
+Copy code
+$ git fetch
+$ git diff <nome_da_branch_local> origin/<nome_da_branch_remota>
+
+git remote show origin
+
+$ git remote set-url origin https://github.com/seu_usuario/novo_repositorio.git
+
 commands:
 git status
 git add .
