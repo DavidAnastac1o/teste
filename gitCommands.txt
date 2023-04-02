@@ -1,0 +1,17 @@
+commands:
+git status
+git add .
+git commit -m ""
+git push origin master
+
+to do for a different project create a new repo
+
+
+To change the repository that you are uploading files to in Git Bash, you will need to use the "git remote" command to update the remote repository location.
+Here are the steps you can follow:
+
+Use the command "git remote -v" to view the current remote repository location.
+Use the command "git remote remove origin" to remove the current remote repository.
+Use the command "git remote add origin [new repository URL]" to add the new remote repository URL.
+Use the command "git push -u origin master" to push your changes to the new repository.
+Please note that you must replace [new repository URL] with the actual URL of the new repository you want to use.
